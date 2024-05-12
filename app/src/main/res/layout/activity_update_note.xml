@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".UpdateNoteActivity">
+
+    <TextView
+        android:id="@+id/EditNoteHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Edit Task"
+        android:textColor="@color/red"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/updateSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_done_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/EditNoteHeading"
+        android:layout_marginEnd="6dp"/>
+
+    <EditText
+        android:id="@+id/updateTitleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/EditNoteHeading"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/red_border"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter the title"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:padding="12dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/updatePriorityEditText"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/updateTitleEditText"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/red_border"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter the Priority"
+        android:maxLines="1"
+        android:maxLength="1"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/updateContentEditText"
+        android:layout_width="372dp"
+        android:layout_height="267dp"
+        android:layout_below="@id/updatePriorityEditText"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/red_border"
+        android:fontFamily="@font/poppins"
+        android:gravity="top"
+        android:hint="Enter the description"
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="277dp"
+        android:layout_height="214dp"
+        android:layout_below="@id/updateContentEditText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="38dp"
+        app:srcCompat="@drawable/edittes" />
+
+
+</RelativeLayout>

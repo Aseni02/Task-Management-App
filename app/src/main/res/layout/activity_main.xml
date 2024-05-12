@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/notesHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/red"
+            android:text="Tasks"
+            android:textSize="30sp"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchBar"
+            android:layout_width="217dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_toStartOf="@+id/sortButton"
+            android:layout_toEndOf="@+id/notesHeading"
+            android:queryHint="Search Tasks..."
+            />
+
+        <ImageButton
+            android:id="@+id/sortButton"
+            android:layout_width="34dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:src="@drawable/baseline_format_list_numbered_rtl_24" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginTop="100dp"
+        android:padding="10dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/red"
+        app:tint = "@color/white"
+        android:src="@drawable/baseline_add_24" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/completedTasksButton"
+        android:layout_width="318dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="677dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toStartOf="@+id/addButton"
+        android:backgroundTint="@color/red"
+        android:elevation="4dp"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Completed Tasks"
+        android:textColor="@color/white"
+        app:cornerRadius="24dp"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white" />
+
+</RelativeLayout>
